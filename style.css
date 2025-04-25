@@ -35,6 +35,28 @@ h1 {
     -webkit-background-clip: text;
     margin-bottom: 18px;
 }
+.title-gradient {
+    background: linear-gradient(90deg, #6366f1 0%, #0ea5e9 100%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+    display: inline-block;
+}
+.subtitle-markus {
+    color: inherit;
+    background: none;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    letter-spacing: inherit;
+    -webkit-background-clip: inherit;
+    background-clip: inherit;
+}
 .status {
     margin-bottom: 18px;
     padding: 8px 0;
@@ -100,15 +122,49 @@ h1 {
     font-size: 1.16rem;
     color: #334155;
 }
-
-.button-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+.button-cross {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     max-width: 300px;
     margin: 0 auto;
 }
-
+.button-cross .middle-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.direction-btn {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px;
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #6366f1, #4f46e5);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 6px rgba(99, 102, 241, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.direction-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(99, 102, 241, 0.3);
+}
+.direction-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(99, 102, 241, 0.2);
+}
+.direction-btn.stop {
+    background: linear-gradient(145deg, #ef4444, #dc2626);
+}
+.direction-btn.stop:hover {
+    background: linear-gradient(145deg, #f87171, #f59e42);
+}
 .number-btn {
     font-size: 24px;
     font-weight: bold;
@@ -120,17 +176,14 @@ h1 {
     box-shadow: 0 4px 6px rgba(99, 102, 241, 0.2);
     transition: transform 0.2s, box-shadow 0.2s;
 }
-
 .number-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 8px rgba(99, 102, 241, 0.3);
 }
-
 .number-btn:active {
     transform: translateY(1px);
     box-shadow: 0 2px 4px rgba(99, 102, 241, 0.2);
 }
-
 #debugInfo {
     background: #18181b;
     color: #f1f5f9;
@@ -161,7 +214,6 @@ h1 {
     background: #6366f1;
     border-radius: 6px;
 }
-
 @media (max-width: 500px) {
     .container {
         max-width: 98vw;
@@ -176,5 +228,11 @@ h1 {
     }
     .data-section {
         padding: 10px 2vw;
+    }
+    .direction-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        padding: 10px;
     }
 }

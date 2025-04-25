@@ -108,5 +108,18 @@ document.getElementById('send2').addEventListener('click', () => sendValue('2'))
 document.getElementById('send3').addEventListener('click', () => sendValue('3'));
 document.getElementById('send4').addEventListener('click', () => sendValue('4'));
 
+// Event Listeners für die Richtungstasten
+const sendUp = document.getElementById('sendUp');
+const sendDown = document.getElementById('sendDown');
+const sendLeft = document.getElementById('sendLeft');
+const sendRight = document.getElementById('sendRight');
+const sendStop = document.getElementById('sendStop');
+
+if (sendUp) sendUp.addEventListener('click', () => sendValue('1'));
+if (sendDown) sendDown.addEventListener('click', () => sendValue('2'));
+if (sendLeft) sendLeft.addEventListener('click', () => sendValue('3'));
+if (sendRight) sendRight.addEventListener('click', () => sendValue('4'));
+if (sendStop) sendStop.addEventListener('click', () => sendValue('0'));
+
 setStatus(false);
 log('micro:bit Web Bluetooth UART gestartet');
