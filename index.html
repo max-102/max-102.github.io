@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro:bit Bluetooth Web App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for Modern Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Micro:bit Bluetooth Web App</h1>
+        <div id="status" class="status disconnected">Nicht verbunden</div>
+        <button id="connectBtn" class="btn primary">Mit Micro:bit verbinden</button>
+        <div class="controls">
+            <div class="button-grid">
+                <button id="send1" class="btn number-btn">1</button>
+                <button id="send2" class="btn number-btn">2</button>
+                <button id="send3" class="btn number-btn">3</button>
+                <button id="send4" class="btn number-btn">4</button>
+            </div>
+        </div>
+        <div class="data-section">
+            <h2 style="font-family:'Montserrat',Arial,sans-serif;font-size:1.18rem;color:#6366f1;margin-bottom:10px;letter-spacing:0.5px;">Empfangene Daten</h2>
+            <div class="data-field">
+                <label style="font-weight:500;">Letzte Nachricht:</label>
+                <span id="receivedData">-</span>
+            </div>
+        </div>
+        <div id="debugInfo" style="margin-top: 1em;"></div>
+    </div>
+    <footer style="margin-top:32px;text-align:center;color:#64748b;font-size:0.98em;opacity:0.85;letter-spacing:0.2px;">
+        <span style="font-family:'Montserrat',Arial,sans-serif;">micro:bit Web Bluetooth UART &mdash; <span style="color:#6366f1;">Cascade Edition</span></span>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
