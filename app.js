@@ -6,9 +6,6 @@ let device, server, uartService, txChar, rxChar;
 
 const statusEl = document.getElementById('status');
 const connectBtn = document.getElementById('connectBtn');
-const sendA = document.getElementById('sendA');
-const sendB = document.getElementById('sendB');
-const sendC = document.getElementById('sendC');
 const receivedData = document.getElementById('receivedData');
 const debugInfo = document.getElementById('debugInfo');
 
@@ -105,12 +102,6 @@ connectBtn.addEventListener('click', () => {
     connect();
   }
 });
-
-// Event Listeners für die nummerierten Buttons
-document.getElementById('send1').addEventListener('click', () => sendValue('1'));
-document.getElementById('send2').addEventListener('click', () => sendValue('2'));
-document.getElementById('send3').addEventListener('click', () => sendValue('3'));
-document.getElementById('send4').addEventListener('click', () => sendValue('4'));
 
 // Event Listeners für die Richtungstasten
 const sendUp = document.getElementById('sendUp');
