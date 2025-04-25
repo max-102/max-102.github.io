@@ -28,7 +28,15 @@ function setStatus(connected) {
     statusEl.className = 'disconnected';
     connectBtn.textContent = 'Mit Micro:bit verbinden';
   }
-  sendA.disabled = sendB.disabled = sendC.disabled = !connected;
+  // Richtungstasten und Stopp-Button aktivieren/deaktivieren
+  const directionBtns = [
+    document.getElementById('sendUp'),
+    document.getElementById('sendDown'),
+    document.getElementById('sendLeft'),
+    document.getElementById('sendRight'),
+    document.getElementById('sendStop')
+  ];
+  directionBtns.forEach(btn => { if (btn) btn.disabled = !connected; });
 }
 
 async function connect() {
@@ -97,10 +105,6 @@ connectBtn.addEventListener('click', () => {
     connect();
   }
 });
-
-sendA.addEventListener('click', () => sendValue('1'));
-sendB.addEventListener('click', () => sendValue('2'));
-sendC.addEventListener('click', () => sendValue('3'));
 
 // Event Listeners für die nummerierten Buttons
 document.getElementById('send1').addEventListener('click', () => sendValue('1'));
