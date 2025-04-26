@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcam Tester</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Webcam Tester</h1>
+        <div class="video-container">
+            <video id="webcam" autoplay playsinline></video>
+        </div>
+        <div class="controls">
+            <button id="startBtn">Webcam starten</button>
+            <button id="stopBtn" disabled>Webcam stoppen</button>
+            <div id="deviceInfoHint" class="hint">Gerätenamen werden erst nach Freigabe der Webcam angezeigt.</div>
+            <select id="deviceSelect"></select>
+        </div>
+        <div id="info"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
